@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> JS async await</title>
+    </head>
+    <body>
+        <script>
+            let result = function(score){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculating results...");
+                    if (score>50) {
+                        resolve("Congratulations! You have passed");
+                    }
+                    else{
+                        reject("You have Failed");
+                    }
+                })
+            }
+
+            let grade = function(response){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculating your grade...");
+                    resolve("Your grade is A. " + response);
+                })
+            }
+            // result(80).then(response =>{
+            //     console.log("Results received");
+            //     return grade(response);
+            // }).then(finalgrade=> {
+            //     console.log(finalgrade);
+            // }).catch(err =>{
+            //     console.log(err);
+            // })
+
+            async function calculateResult(){
+                try{
+                    const response = await result(80);
+                     
+                    console.log("Results received");
+                    const finalgrade = await grade(response);
+                    console.log(finalgrade);
+                }
+                catch(err){
+                    console.log(err);
+                }
+            }
+            calculateResult();
+
+        </script>
+    </body>
+</html>

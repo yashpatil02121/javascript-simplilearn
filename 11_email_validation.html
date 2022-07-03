@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="text" placeholder="Email">
+        <button onclick="validate()" type="button">submit</button>
+    </form>
+</body>
+<script>
+    function validate(){
+        var mail = document.getElementById("text").value;
+        var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+        if (regx.text(mail)) {
+            alert("You have provided a valid Emial ID");
+            return true
+        }
+        else{
+            alert("Sorry! Incorrect Eamil ID");
+            return false;
+        }
+    }
+</script>
+</html>

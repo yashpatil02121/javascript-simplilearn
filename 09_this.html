@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This JS</title>
+</head>
+<body>
+    <!-- <script>
+        var value = 50;
+
+        function myfun(){
+            var value = 100;
+            alert("Value:"+value);
+            alert("This value:"+this.value);
+        }
+        myfun();
+    </script> -->
+
+    <!-- <script>
+        const ran = {
+            name: "John",
+            info(){
+                console.log("Hi! My name is "+ this.name);
+            }
+        }
+        ran.info();
+    </script> -->
+
+    <script>
+        const ran = {
+            name: "Tutorial",
+            video = ["JS","this","Key"],
+            info(){
+                this.video.forEach(function(tag){
+                    console.log(this.name,tag);
+                },this)
+            }
+        }
+        ran.info();
+    </script>
+</body>
+</html>

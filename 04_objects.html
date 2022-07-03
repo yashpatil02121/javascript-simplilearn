@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>
+            JS objects
+        </title>
+    </head>
+    <body>
+        <h1>Creating JS objects</h1>
+        <p id="demo"></p>
+    </body>
+    <!-- <script>
+        var student = {
+            name: "Chris",
+            age:21,
+            studies: "Computer Science",
+        };
+        // document.getElementById("demo").innerHTML=student.name+" of the age "+student.age+" studies "+student.studies;
+
+    </script>
+    <script>
+        var student = new Object();
+        student.name = "Chris",
+        student.age = 21,
+        student.studies = "Computer Science";
+        // document.getElementById("demo").innerHTML=student.name+" of the age "+student.age+" studies "+student.studies;
+
+    </script>
+ 
+    <script>
+        function stud(name,age,studies){
+            this.name = name;
+            this.age = age;
+            this.studies = studies;
+        }
+        let student = stud("Chris",21,"Computer Science");
+        // document.getElementById("demo").innerHTML=student.name+" of the age "+student.age+" studies "+student.studies;
+
+    </script>
+    <script>
+        //UPDATING AGE (PROPERTIES) 
+        var student = {
+            name: "Chris",
+            age:21,
+            studies: "Computer Science",
+        };
+        // x = student.age;
+        x = "age";
+        // document.getElementById("demo").innerHTML=student.name+" of the age "+x+" studies "+student.studies;
+        document.getElementById("demo").innerHTML=student.name+" of the age "+student[x]+" studies "+student.studies;
+
+    </script>
+
+    <!-- //METHODS -->
+    <!-- <button id="click me">Click me</button>
+    <script>
+        let user = {
+            name : "Chris",
+            age : 24,
+
+        };
+        function sayhi(){
+            alert("Hello!");
+        }
+        user.message = sayhi;
+        document.getElementById("demo").innerHTML = "Hi "+user.name;
+        document.getElementById("click me").onclick = user.message;
+    </script> --> -->
+
+    <!-- //GETTERS SETTERS -->
+    <!-- <p id="demo"></p> -->
+    <script>
+        var car = {
+            model:"BMW 320d",
+            color: "Navy Blue",
+            fuel_type = "diesel",
+            get fuel(){
+                return this.fuel_type
+            },
+        };
+        document.getElementById("demo").innerHTML = car.fuel;
+    </script>
+
+    <script>
+        var car = {
+            model: "Audi",
+            color: "Red",
+            fuel_type:"",
+            set fuel(fuel){
+                this.fuel_type = fuel;
+            }
+        }
+        car.fuel = "Petrol";
+        document.getElementById("demo").innerHTML = car.fuel;
+
+    </script>
+
+</html>

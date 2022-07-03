@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            JS closures
+        </title>
+    </head>
+    <body>
+        <!-- <script>
+            let a = 10;
+            function fun(){
+                let b = 20;
+                document.write(a+b);
+            }
+            fun();
+
+        </script> -->
+
+        <script>
+            var a = 10;
+            function func(){
+                var b = 20;
+                function fun(){
+                    var c = a + b;
+                    return c;
+                }
+                return fun();
+            }
+            var sum = func();
+            document.write("the sum is "+ sum);
+        </script>
+
+
+    </body>
+</html>
